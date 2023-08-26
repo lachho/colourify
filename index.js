@@ -5,6 +5,10 @@ function paint(colour) {
 
 function random() {
 	const circle = document.getElementById('circleID');
-	const newColour = '#' + Math.floor(Math.random()*16777215).toString(16);
-	circle.style = `background-color:${newColour}`
+	circle.style = `background-color:${newColour()}`
+	document.body.style.backgroundColor = newColour();
+}
+
+function newColour() {
+  return '#' + Math.floor(Math.random()*16777215).toString(16);
 }
